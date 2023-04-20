@@ -18,7 +18,6 @@ class Tree:
     def for_each_level_order(self, visit: Callable[[TreeNode], None]) -> None:
         self.root.for_each_level_order(visit)
 
-    # show tree using graphviz
     def show(self) -> None:
         graph = graphviz.Digraph()
         self._add_node(graph, self.root)
