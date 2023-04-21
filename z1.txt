@@ -1,0 +1,31 @@
+1. Polecenie cat wyświetla zawartość pliku /etc/passwd, który zawiera informacje o użytkownikach systemu.
+
+Polecenie cut jest używane do wycięcia wybranej części każdej linii przekazanej do niego. W tym przypadku, flaga -d określa separator kolumn, którym jest dwukropek (:), a flaga -f określa numery kolumn do wyświetlenia - 1, 3 i 6. Oznacza to, że zostaną wybrane trzy kolumny z każdej linii: nazwa użytkownika (1), identyfikator użytkownika (3) i ścieżka do katalogu domowego (6).
+
+Przekierowanie potoku | przesyła wynik polecenia cat do polecenia cut, które przetwarza go zgodnie z podanymi flagami.
+
+Ostatecznie, wynik wyświetlany jest na standardowym wyjściu, zawierający nazwy użytkowników, identyfikatory użytkowników oraz ścieżki do katalogów domowych oddzielone dwukropkiem (:).
+
+2. Polecenie cat wyświetla zawartość pliku /etc/passwd, który zawiera informacje o użytkownikach systemu.
+
+Polecenie tr jest używane do translacji lub usunięcia znaków w strumieniu wejściowym. W tym przypadku flaga -s powoduje zastąpienie powtarzających się znaków dwukropka (:), jeśli takie występują, pojedynczym znakiem dwukropka.
+
+Przekierowanie potoku | przesyła wynik polecenia cat do polecenia tr, które przetwarza go zgodnie z podanymi flagami.
+
+Następnie przekierowanie potoku | przesyła wynik polecenia tr do polecenia cut, które jest używane do wycięcia wybranej części każdej linii przekazanej do niego. W tym przypadku, flaga -d określa separator kolumn, którym jest dwukropek (:), a flaga -f określa numery kolumn do wyświetlenia - 1, 3 i 5. Oznacza to, że zostaną wybrane trzy kolumny z każdej linii: nazwa użytkownika (1), identyfikator użytkownika (3) i katalog główny (5).
+
+Ostatecznie, wynik wyświetlany jest na standardowym wyjściu, zawierający nazwy użytkowników, identyfikatory użytkowników oraz katalogi główne oddzielone dwukropkiem (:).
+
+3. Polecenie cat wyświetla zawartość pliku /etc/passwd, który zawiera informacje o użytkownikach systemu.
+
+Polecenie tr jest używane do translacji lub usunięcia znaków w strumieniu wejściowym. W tym przypadku flaga -s powoduje zastąpienie powtarzających się znaków dwukropka (:), jeśli takie występują, pojedynczym znakiem dwukropka.
+
+Przekierowanie potoku | przesyła wynik polecenia cat do polecenia tr, które przetwarza go zgodnie z podanymi flagami.
+
+Następnie przekierowanie potoku | przesyła wynik polecenia tr do polecenia cut, które jest używane do wycięcia wybranej części każdej linii przekazanej do niego. W tym przypadku, flaga -d określa separator kolumn, którym jest dwukropek (:), a flaga -f określa numery kolumn do wyświetlenia - 1, 3 i 5. Oznacza to, że zostaną wybrane trzy kolumny z każdej linii: nazwa użytkownika (1), identyfikator użytkownika (3) i katalog główny (5).
+
+Kolejne polecenie tr przetwarza wynik polecenia cut, aby zastąpić znaki dwukropka pojedynczymi spacjami.
+
+Ostatecznie, wynik wyświetlany jest na standardowym wyjściu, zawierający nazwy użytkowników, identyfikatory użytkowników oraz katalogi główne oddzielone spacjami.
+
+4. ls -l | cut -d " " -f 1,5,9

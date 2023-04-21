@@ -4,6 +4,3 @@ def numbers(n: int) -> None:
         return numbers(n - 1)
     else:
         return
-
-
-numbers(5)
