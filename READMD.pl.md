@@ -1,5 +1,5 @@
-[![pl](https://img.shields.io/badge/lang-en-red.svg)](https://github.com/Ciastelix/Python-Algorithms/README.pl.md)
-[![en](https://img.shields.io/badge/lang-en-green.svg)](https://github.com/Ciastelix/Python-Algorithms/README.md)
+[![pl](https://img.shields.io/badge/lang-pl-red.svg)](README.pl.md)
+[![en](https://img.shields.io/badge/lang-en-green.svg)](README.md)
 
 # Spis treści
 
